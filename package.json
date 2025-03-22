@@ -1,0 +1,35 @@
+{
+  "name": "ai-model-loader",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript/TypeScript module for efficiently lazy-loading AI models in web applications",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "build:demo": "webpack --mode production && npm run copy-demo-html",
+    "copy-demo-html": "mkdir -p dist/demo && cp src/demo/index.html dist/demo/",
+    "start": "webpack serve --mode development --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "machine-learning",
+    "lazy-loading",
+    "performance",
+    "tensorflow.js"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@tensorflow-models/universal-sentence-encoder": "^1.3.3",
+    "@tensorflow/tfjs": "^4.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
